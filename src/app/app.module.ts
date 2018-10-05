@@ -6,25 +6,34 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { LoginComponent } from './landing-page/login/login.component';
-import { SignUpComponent } from './landing-page/sign-up/sign-up.component';
+import { LoginComponent } from './landing-page/authentication/login/login.component';
+import { SignUpComponent } from './landing-page/authentication/sign-up/sign-up.component';
 import { UserService } from './services/user/user.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthenticationComponent } from './landing-page/authentication/authentication.component';
+import { MaterializeComponentModules } from './materialize/materialize-component-modules';
+// Imports hammerjs library necessary for gesture response support components such as mat-slide-toggle, mat-slider, matTooltip reply on hammerjs for gesutres
+import 'hammerjs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     ReactiveFormsModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterializeComponentModules,
+    BrowserAnimationsModule,
+    
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

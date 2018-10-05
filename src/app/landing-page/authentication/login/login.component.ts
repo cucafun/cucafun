@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, Validators, NgForm } from '@angular/forms';
+//import {MatInputModule} from '@angular/material/input';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit = () => {
+  ngOnInit(){
     if(this.isSignUp){
       return this.userForm = new FormGroup({
         // If user IS signing up constrcut new form for signup
@@ -20,11 +21,14 @@ export class LoginComponent implements OnInit {
     }
     return this.userForm = new FormGroup({
       // If user is NOT signing up construct new form for login
+      //TODO implement async validator to check if the username is valid from the server
+      'username': new FormControl(null, Validators.required),
+      'password': new FormControl(null, Validators.required)
     });
   }
 
-  onSubmit = () =>{
-
+  onSubmit(form: NgForm){
+    console.log(form);
   }
 
 }
