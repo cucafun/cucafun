@@ -9,7 +9,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './landing-page/login/login.component';
 import { SignUpComponent } from './landing-page/sign-up/sign-up.component';
 import { UserService } from './services/user/user.service';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

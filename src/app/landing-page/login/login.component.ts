@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit = () => {
     if(this.isSignUp){
       return this.userForm = new FormGroup({
         // If user IS signing up constrcut new form for signup
@@ -21,6 +21,10 @@ export class LoginComponent implements OnInit {
     return this.userForm = new FormGroup({
       // If user is NOT signing up construct new form for login
     });
+  }
+
+  onSubmit = () =>{
+
   }
 
 }
