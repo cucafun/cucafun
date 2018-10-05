@@ -1,13 +1,23 @@
 <div class="row">
-<form class="col s12 auth-form">
+<form class="col s12" [formGroup]="userForm" #f="ngForm" (ngSubmit)="onSubmit(f)">
     <div class="row auth-input">
       <div class="input-field col s12">
-        <input placeholder="Username" type="text" id="username" class="validate">        
+        <input 
+          placeholder="Username" 
+          type="text" 
+          id="username" 
+          class="validate"
+          formControlName="username">                  
       </div>
     </div>
     <div class="row auth-input">
         <div class="input-field col s12">
-          <input placeholder="Password" type="text" id="Password" class="validate">          
+          <input 
+            placeholder="Password" 
+            type="text" 
+            id="Password" 
+            class="validate"
+            formControlName="password">   
         </div>
       </div>
       <hr>

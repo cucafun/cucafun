@@ -8,6 +8,8 @@ import { environment } from '../environments/environment';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './landing-page/login/login.component';
 import { SignUpComponent } from './landing-page/sign-up/sign-up.component';
+import { UserService } from './services/user/user.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,10 @@ import { SignUpComponent } from './landing-page/sign-up/sign-up.component';
   ],
   imports: [
     BrowserModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
