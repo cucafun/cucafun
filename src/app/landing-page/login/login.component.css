@@ -1,4 +1,15 @@
 .auth-input{
-  border: 5px solid #FFFFFF;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
 }
 
+.continue-btn{
+  background: linear-gradient(to right, #C8A518, #EBC21C);
+  border-radius: 5px;
+}
+
+.signup-btn{
+  background: linear-gradient(to right, #53E1E0, #1CEBB7);;
+  border-radius: 5px;
+  border: 2px solid #FFFFFF;
+}
