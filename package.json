@@ -28,6 +28,7 @@
     "http-server": "^0.11.1",
     "jQuery": "^1.7.4",
     "materialize-css": "^1.0.0-rc.2",
+    "roboto-fontface": "^0.10.0",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
   },
