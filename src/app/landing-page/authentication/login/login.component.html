@@ -1,9 +1,14 @@
+<div class="container">
+<div class="cucafun-logo-name">
+    <img width="300" src="/src/assets/icons/logo-with-name_512.png" alt="cucafun">  
+  </div>
 <div class="row">
 <form class="col s12" [formGroup]="userForm" #f="ngForm" (ngSubmit)="onSubmit(f)">
     <div class="row auth-input">
       <div class="input-field col s12">
         <input 
           placeholder="Username" 
+          matInput
           type="text" 
           id="username" 
           class="validate"
@@ -13,17 +18,25 @@
     <div class="row auth-input">
         <div class="input-field col s12">
           <input 
-            placeholder="Password" 
-            type="text" 
+            placeholder="Password"
+            matInput
+            type="password" 
             id="Password" 
             class="validate"
             formControlName="password">   
         </div>
     </div>
       <hr>
-      <div class="row">        
-        <button class="signup-btn" mat-raised-button>SignUp</button>
-        <button class="continue-btn" [disabled]="!f.valid" type="submit" mat-raised-button>Continue</button>
+      <div class="row">
+        <div class="col s6">
+            <button class="btn-primary btn-large" mat-raised-button>
+              <a routerLink="/signup">I WANT FUN</a>
+            </button>
+        </div>     
+        <div class="col s6">
+            <button class="continue-btn btn-large" [disabled]="!f.valid" type="submit" mat-raised-button>Continue</button>
+        </div>                
       </div>
   </form>
+</div>
 </div>

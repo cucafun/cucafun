@@ -8,8 +8,11 @@
   border-radius: 5px;
 }
 
-.signup-btn{
-  background: transparent;
-  border-radius: 5px;
-  border: 2px solid #FFFFFF;
+
+
+.btn-primary a{
+  text-decoration: none;
+  color: #FFFFFF;
 }
+
+

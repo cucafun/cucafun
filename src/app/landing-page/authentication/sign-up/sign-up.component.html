@@ -1,3 +1,40 @@
-<p>
-  sign-up works!
-</p>
+<div class="container">
+  <div>
+    <!-- header with the back button -->
+  </div>
+  <div >
+    <form class="col s12" [formGroup]="signUpForm" #f="ngForm" (ngSubmit)="onSignUp(f)">
+      <div class="row">
+        <div class="input-field col s12">
+          <input 
+            type="email"
+            matInput
+            placeholder="E-mail"
+            id="email"
+            formControlName="email">
+        </div>  
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input 
+            type="text"
+            matInput
+            placeholder="Username"
+            id="username"
+            formControlName="username">
+        </div>
+      </div>      
+      <div class="row">
+        <div class="input-field col s12">
+          <input 
+            type="password"
+            matInput
+            placeholder="Password"
+            id="password"
+            formControlName="password">
+        </div>
+      </div>
+      <button class="btn-primary" type="submit" mat-raised-button>START</button>
+    </form>
+  </div>
+</div>

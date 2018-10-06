@@ -11,7 +11,6 @@ import { SignUpComponent } from './landing-page/authentication/sign-up/sign-up.c
 import { UserService } from './services/user/user.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { AuthenticationComponent } from './landing-page/authentication/authentication.component';
 import { MaterializeComponentModules } from './materialize/materialize-component-modules';
 // Imports hammerjs library necessary for gesture response support components such as mat-slide-toggle, mat-slider, matTooltip reply on hammerjs for gesutres
 import 'hammerjs';
@@ -23,7 +22,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LandingPageComponent,
     LoginComponent,
     SignUpComponent,
-    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
