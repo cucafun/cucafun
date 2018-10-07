@@ -16,12 +16,13 @@ export class AuthenticationService {
     const userData = {email: email, username: username, password: password};
 
     console.log(`email: ${email} | password: ${password} | username: ${username}`)
+    // Sample of httpOptions
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'
       })
     }
-    return this.http.get('api/users');
+    return this.http.post('api/users', userData);
   }
 }
