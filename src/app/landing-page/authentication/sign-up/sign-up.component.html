@@ -4,7 +4,7 @@
   </div>
   <div >
     <form class="col s12" [formGroup]="signUpForm" #f="ngForm" (ngSubmit)="onSignUp(f)">
-      <div class="row">
+      <div class="row auth-input">
         <div class="input-field col s12">
           <input 
             type="email"
@@ -14,7 +14,7 @@
             formControlName="email">
         </div>  
       </div>
-      <div class="row">
+      <div class="row auth-input">
         <div class="input-field col s12">
           <input 
             type="text"
@@ -24,7 +24,7 @@
             formControlName="username">
         </div>
       </div>      
-      <div class="row">
+      <div class="row auth-input">
         <div class="input-field col s12">
           <input 
             type="password"
