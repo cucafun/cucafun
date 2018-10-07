@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
-import { HttpHeaders } from '@angular/common/http';
+import { HttpHeaders, HttpClient } from '@angular/common/http';
 
 
 @Injectable({
@@ -8,7 +8,7 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class AuthenticationService {
 
-  constructor(private http: Http) { }
+  constructor(private http: HttpClient) { }
 
   signupUser(email: string, username: string, password: string, ){
     // we need to make a post http request to the backend server sending
@@ -16,8 +16,12 @@ export class AuthenticationService {
     const userData = {email: email, username: username, password: password};
 
     console.log(`email: ${email} | password: ${password} | username: ${username}`)
-
-    let headers: HttpHeaders = new HttpHeaders();    
-    return this.http.get('/users');
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      })
+    }
+    return this.http.get('api/users');
   }
 }

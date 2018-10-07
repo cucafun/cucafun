@@ -15,7 +15,7 @@ import { MaterializeComponentModules } from './materialize/materialize-component
 // Imports hammerjs library necessary for gesture response support components such as mat-slide-toggle, mat-slider, matTooltip reply on hammerjs for gesutres
 import 'hammerjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { HttpModule } from '@angular/http';
     AppRoutingModule,
     MaterializeComponentModules,
     BrowserAnimationsModule,
-    HttpModule
+    HttpClientModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
