@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '../authentication.service';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
-import { UserService } from '../../../services/user/user.service';
+import { UserService, AuthenticationService } from '@app/core/services';
 
 
 @Component({
@@ -15,7 +14,7 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit() {
     this.signUpForm = new FormGroup({
-      'email': new FormControl(null, Validators.required),
+      'email': new FormControl(null, [Validators.required, Validators.email]),
       'username': new FormControl(null, Validators.required),
       'password': new FormControl(null, Validators.required)
     })

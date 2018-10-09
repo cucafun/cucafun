@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, Validators, NgForm } from '@angular/forms';
-import { AuthenticationService } from '../authentication.service';
-//import {MatInputModule} from '@angular/material/input';
+import { AuthenticationService } from '@app/core/services';
 
 @Component({
   selector: 'app-login',

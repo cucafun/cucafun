@@ -1,7 +1,9 @@
-<div class="container">
+  
   <div>
     <!-- header with the back button -->
+    <app-header></app-header>
   </div>
+  <div class="container">
   <div >
     <form class="col s12" [formGroup]="signUpForm" #f="ngForm" (ngSubmit)="onSignUp(f)">
       <div class="row auth-input">
@@ -34,7 +36,8 @@
             formControlName="password">
         </div>
       </div>
-      <button class="btn-primary" type="submit" mat-raised-button>START</button>
+      <button class="btn-primary" type="submit" [disabled]="!f.valid" mat-raised-button>START</button>
     </form>
   </div>
 </div>
+
