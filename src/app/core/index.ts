@@ -1,0 +1,1 @@
+export * from '@app/core/not-found/not-found.component';
