@@ -9,7 +9,7 @@ import { AuthenticationService, AuthenticationGuardService } from '@app/core/ser
 import { HttpClientModule } from '@angular/common/http';
 // Imports hammerjs library necessary for gesture response support components such as mat-slide-toggle, mat-slider, matTooltip reply on hammerjs for gesutres
 import 'hammerjs';
-import { LoginComponent, SignUpComponent } from '@app/modules/home/pages';
+import { LoginComponent, SignUpComponent } from '@app/modules/pages';
 
 @NgModule({
   declarations: [NotFoundComponent, LoginComponent, SignUpComponent],  
