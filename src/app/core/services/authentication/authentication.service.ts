@@ -4,9 +4,7 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { User } from '@app/core/models';
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class AuthenticationService {
 
   constructor(private http: HttpClient) { }

@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { CoreRoutingModule } from '@app/core/core.routing';
 import { NotFoundComponent } from '@app/core/not-found/not-found.component';
 import { SharedModule } from '@app/shared/shared.module';
-import { AuthenticationService, AuthenticationGuardService } from '@app/core/services';
+import { AuthenticationService, AuthenticationGuardService, UserService } from '@app/core/services';
 import { HttpClientModule } from '@angular/common/http';
 // Imports hammerjs library necessary for gesture response support components such as mat-slide-toggle, mat-slider, matTooltip reply on hammerjs for gesutres
 import 'hammerjs';
@@ -20,11 +20,12 @@ import { LoginComponent, SignUpComponent } from '@app/modules/pages';
     HttpClientModule
   ],
   exports: [
-    RouterModule
+    RouterModule,
   ],  
   providers: [
     AuthenticationService,
-    AuthenticationGuardService
+    AuthenticationGuardService,
+    UserService
   ],
 })
 export class CoreModule { }

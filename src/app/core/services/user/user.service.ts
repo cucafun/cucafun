@@ -1,9 +1,7 @@
-import { User } from "../../models/user/user.model";
+import { User } from "@app/core/models";
 import { Injectable } from "@angular/core";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class UserService{
   public user: User;
   constructor(){
