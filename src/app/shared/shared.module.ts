@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '@app/shared';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterializeComponentModules } from '@app/materialize/materialize-component-modules';
+import { MaterializeComponentModules } from '@app/materialize';
 
 @NgModule({
   imports: [

@@ -1,1 +1,2 @@
-export * from '@app/core/not-found/not-found.component';
+export * from './not-found/not-found.component';
+export * from './core.module'

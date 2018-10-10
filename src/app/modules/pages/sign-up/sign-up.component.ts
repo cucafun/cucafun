@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 import { UserService, AuthenticationService } from '@app/core/services';
 
-
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -21,7 +20,8 @@ export class SignUpComponent implements OnInit {
   }
 
   onSignUp(form: NgForm){
-    this.userService.user.email = form.value.email;    
+    console.log(form);
+    this.userService.user.email = form.value.email;
     this.userService.user.username = form.value.username;
     this.userService.user.password = form.value.password;
 
@@ -31,6 +31,4 @@ export class SignUpComponent implements OnInit {
         (error) => console.log(error)
       );
   }
-
-
 }

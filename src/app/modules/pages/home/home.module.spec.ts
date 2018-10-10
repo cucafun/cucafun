@@ -1,4 +1,4 @@
-import { HomeModule } from '@app/modules/pages/home/home.module';
+import { HomeModule } from '@app/modules/pages';
 
 describe('HomeModule', () => {
   let homeModule: HomeModule;
